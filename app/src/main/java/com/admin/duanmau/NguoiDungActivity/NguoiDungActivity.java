@@ -3,6 +3,7 @@ package com.admin.duanmau.NguoiDungActivity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,10 +14,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.admin.duanmau.Adapter.ViewPagerNguoiDungAdapter;
+import com.admin.duanmau.Base.BaseActivity;
 import com.admin.duanmau.R;
 
-public class NguoiDungActivity extends AppCompatActivity
+public class NguoiDungActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private ViewPager vpNguoiDung;
+    private ViewPagerNguoiDungAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +31,10 @@ public class NguoiDungActivity extends AppCompatActivity
         setContentView(R.layout.activity_nguoi_dung);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        vpNguoiDung = (ViewPager) findViewById(R.id.vpNguoiDung);
+        adapter = new ViewPagerNguoiDungAdapter(getSupportFragmentManager());
+        vpNguoiDung.setAdapter(adapter);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,13 +63,14 @@ public class NguoiDungActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-
+            vpNguoiDung.setCurrentItem(0);
         } else if (id == R.id.nav_gallery) {
-
+            vpNguoiDung.setCurrentItem(1);
         } else if (id == R.id.nav_share) {
-
+            vpNguoiDung.setCurrentItem(2);
         } else if (id == R.id.nav_send) {
-
+        }else if(id == R.id.navChinhSuaNguoiDung){
+            vpNguoiDung.setCurrentItem(3);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

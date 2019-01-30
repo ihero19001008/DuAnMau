@@ -6,9 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.admin.duanmau.BanChay.BanChayActivity;
+import com.admin.duanmau.Base.BaseActivity;
+import com.admin.duanmau.HoaDon.HoaDonActivity;
 import com.admin.duanmau.NguoiDungActivity.NguoiDungActivity;
+import com.admin.duanmau.Sach.SachActivity;
+import com.admin.duanmau.TheLoaiSach.TheLoaiSachActivity;
 
-public class ManHinhChinhActivity extends AppCompatActivity implements View.OnClickListener {
+public class ManHinhChinhActivity extends BaseActivity implements View.OnClickListener {
 
 
     private LinearLayout llNguoiDung;
@@ -42,22 +47,22 @@ public class ManHinhChinhActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         if(v == llNguoiDung){
-            startActivity(new Intent(ManHinhChinhActivity.this, NguoiDungActivity.class));
+            changeClass(NguoiDungActivity.class);
         }
         else if(v == llTheLoaiSach){
-            
+            changeClass(TheLoaiSachActivity.class);
         }
         else if(v == llSach){
-
+            changeClass(SachActivity.class);
         }
         else if(v == llHoaDon){
-
+            changeClass(HoaDonActivity.class);
         }
         else if(v == llBanChay){
-
+            changeClass(BanChayActivity.class);
         }
         else if(v == llThongKe){
-
+            changeClass(ThongKeActivity.class);
         }
     }
 }

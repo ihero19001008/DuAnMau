@@ -12,6 +12,10 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Thêm người dùng" />
+        <item
+            android:id="@+id/navChinhSuaNguoiDung"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Thêm người dùng" />
     </group>
 
     <item android:title="Chức năng">

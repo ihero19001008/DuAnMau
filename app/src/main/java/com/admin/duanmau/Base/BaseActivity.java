@@ -1,5 +1,6 @@
 package com.admin.duanmau.Base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,11 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    public void changeClass(Class target){
+        Intent intent = new Intent(this, target);
+        startActivity(intent);
     }
 
 }

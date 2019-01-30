@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.admin.duanmau.Base.BaseActivity;
-import com.admin.duanmau.DangNhapDangKy.DangNhapActivity;
+import com.admin.duanmau.DangNhap.DangNhapActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;

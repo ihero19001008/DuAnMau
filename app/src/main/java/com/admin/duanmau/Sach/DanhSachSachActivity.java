@@ -1,16 +1,15 @@
-package com.admin.duanmau.TheLoaiSach;
+package com.admin.duanmau.Sach;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.admin.duanmau.Base.BaseActivity;
 import com.admin.duanmau.R;
 
-public class TheLoaiSachActivity extends BaseActivity {
+public class DanhSachSachActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_the_loai_sach);
+        setContentView(R.layout.activity_danh_sach_sach);
     }
 }

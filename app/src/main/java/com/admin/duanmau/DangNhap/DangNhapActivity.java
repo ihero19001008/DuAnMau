@@ -1,4 +1,4 @@
-package com.admin.duanmau.DangNhapDangKy;
+package com.admin.duanmau.DangNhap;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,11 +9,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.admin.duanmau.MainActivity;
+import com.admin.duanmau.BanChay.BanChayActivity;
+import com.admin.duanmau.Base.BaseActivity;
 import com.admin.duanmau.ManHinhChinhActivity;
 import com.admin.duanmau.R;
 
-public class DangNhapActivity extends AppCompatActivity implements View.OnClickListener {
+public class DangNhapActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView imageView;
     private EditText edtTenDangNhap;
@@ -39,7 +40,7 @@ public class DangNhapActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         if(v == btnDangNhap){
-            startActivity(new Intent(DangNhapActivity.this, ManHinhChinhActivity.class));
+            changeClass(ManHinhChinhActivity.class);
         }
     }
 }

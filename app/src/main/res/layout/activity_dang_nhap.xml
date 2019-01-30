@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DangNhapDangKy.DangNhapActivity"
+    tools:context=".DangNhap.DangNhapActivity"
     android:background="#fff">
 
     <ImageView
@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
+        android:hint="Nhập Username"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
@@ -39,11 +40,12 @@
     <EditText
         android:id="@+id/edtMatKhau"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:hint="Nhập Password"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
